@@ -1,0 +1,107 @@
+footer {
+  background: $background-color-footer;
+}
+
+.flexbox-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.address-footer {
+  width: 231px;
+  font-style: normal;
+  margin-right: 70px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.logo-box {
+  margin-bottom: 20px;
+}
+
+address {
+  font-style: normal;
+  color: #ffffff;
+  background-color: #2f303a;
+}
+
+.site-address .link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border: $accent-color;
+  }
+}
+
+.box-join {
+  display: block;
+  width: 270px;
+  margin-top: 72px;
+  margin-right: 30px;
+}
+
+.subscribe {
+  display: block;
+  width: 570px;
+  margin-top: 72px;
+}
+
+.subscribe-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.post {
+  width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  margin-right: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.join {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* Оформление подписки в футере */
+.button .subscribe-btn {
+  margin: 0;
+  padding: 0;
+}
+
+.subscribe-mailing {
+  display: inline-flex;
+  align-items: center;
+}
+
+.subscribe-target {
+  margin-right: 10px;
+}
+
+.icon-send {
+  fill: #ffffff;
+}

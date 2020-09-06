@@ -1,0 +1,15 @@
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: $title-text-color;
+}
+
+.section-subtitle.feature,
+.section-subtitle.teams {
+  margin-bottom: 10px;
+}

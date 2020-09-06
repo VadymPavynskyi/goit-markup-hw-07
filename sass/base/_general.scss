@@ -1,0 +1,65 @@
+/* Скрываем элемент */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+  background: #ffffff;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p.par .feature {
+  margin-bottom: 10px;
+}
+
+/* утилиты - ставим вначале списка!, убираем знаки в ненумерованном списке */
+.list,
+.filter,
+.project {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* убираем подчёркивание ссылок */
+.link,
+.project,
+.button {
+  text-decoration: none;
+}
+
+.link {
+  color: inherit;
+}
+
+.section-subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #212121;
+}
+
+.section-subtitle.feature,
+.section-subtitle.activities {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

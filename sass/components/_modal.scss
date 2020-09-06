@@ -1,0 +1,240 @@
+/* Стили модального окна */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+
+  z-index: 100;
+  opacity: 1;
+  transition: 250ms $timing-function;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-width: 528px;
+  height: 581px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  margin: 0;
+  padding: 0;
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.btn-close:focus,
+.btn-close:hover {
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.btn-close:focus .icon-vector,
+.btn-close:hover .icon-vector {
+  fill: $accent-color;
+  transition: fill 250ms $timing-function, background 250ms $timing-function;
+}
+
+/* Оформление формы */
+
+.modal-direction {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: #212121;
+
+  text-align: center;
+  justify-content: center;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+.icon-modal-input {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 15px;
+  /* transform: translateY(-50%); */
+  transition: fill 250ms $timing-function;
+}
+
+/* Задать 100% ширины для .form-field */
+.form-field input {
+  width: 100%;
+}
+
+.form-field input {
+  padding: 12px 12px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field label {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.17;
+  margin-bottom: 4px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-field textarea {
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field textarea::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field:focus-within > .icon-modal-input {
+  fill: $accent-color;
+}
+
+.form-field:hover > .icon-modal-input {
+  fill: $accent-color;
+}
+
+.form-field .comment:focus-within {
+  outline-color: $accent-color;
+}
+
+input .form-input {
+  width: 448px;
+  font: inherit;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-input:focus {
+  outline-color: $accent-color;
+}
+
+.form-input:hover-wisin {
+  outline-color: $accent-color;
+}
+/* Кастомный чекбокс модального окна */
+
+.field-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-left: 54px;
+  margin-right: 8.4px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: background 250ms $timing-function;
+}
+
+.checkbox:checked + .icon {
+  border-color: transparent;
+  background-color: $accent-color;
+  background-image: url("../images/modal/icon-check-v.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.agreement {
+  /* text-decoration: none; */
+  color: $accent-color;
+  text-decoration-line: underline;
+}
+
+.btn-order {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 55px 10px 56px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: $accent-color;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 250ms $timing-function;
+}
+
+.btn-order:focus,
+.btn-order:hover {
+  background: #188ce8;
+  outline: none;
+}

@@ -1,0 +1,44 @@
+/* список clients */
+
+.section.clients {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.clients.list {
+  display: flex;
+  list-style: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-logo-img {
+  fill: #afb1b8;
+  transition: fill 250ms $timing-function;
+}
+
+.clients-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+
+  &:hover .clients-logo-img,
+  &:focus .clients-logo-img {
+    fill: $accent-color;
+  }
+}
